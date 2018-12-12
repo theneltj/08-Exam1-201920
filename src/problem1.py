@@ -3,7 +3,7 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
+         and Tyler Thenell.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -101,11 +101,25 @@ def problem1(square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # DONE: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    #attach square to window
+    square.attach_to(window)
+    #create circle object with the given details (directly below square)
+    circle = rg.Circle(rg.Point(square.center.x, square.center.y+square.length_of_each_side),square.length_of_each_side/2)
+    circle.fill_color = square.fill_color
+    circle.outline_thickness = thickness
+    circle.attach_to(window)
+    #create line connecting circle center to middle left edge of square (thickness and color changed)
+    line = rg.Line(circle.center, rg.Point(square.center.x-square.length_of_each_side/2, square.center.y))
+    line.thickness = thickness
+    line.color = square.outline_color
+    line.attach_to(window)
+    #render
+    window.render()
 
-
+    #!!!!!!!!!!!NOTE: FORGOT TO FORK FIRST SO I HAD TO COPY CODE TO NEWLY FORKED VERSION IN ORDER TO COMMIT/PUSH
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
