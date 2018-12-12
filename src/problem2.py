@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Tyler Thenell.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 def test_factor_sum():
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  DONE: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -45,7 +45,40 @@ def test_factor_sum():
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
 
+    #TEST 1
+    expected = 11
+    actual = factor_sum(28)
+    print('T1 Expected:', expected)
+    print('T1 Actual:  ', actual)
+    print()
 
+    # TEST 2
+    expected = 4
+    actual = factor_sum(25)
+    print('T2 Expected:', expected)
+    print('T2 Actual:  ', actual)
+    print()
+
+    # TEST 3
+    expected = 7
+    actual = factor_sum(4)
+    print('T3 Expected:', expected)
+    print('T3 Actual:  ', actual)
+    print()
+
+    # TEST 4
+    expected = 9
+    actual = factor_sum(10)
+    print('T4 Expected:', expected)
+    print('T4 Actual:  ', actual)
+    print()
+
+    # TEST 5
+    expected = 12
+    actual = factor_sum(33)
+    print('T5 Expected:', expected)
+    print('T5 Actual:  ', actual)
+    print()
 def factor_sum(n):
     """
     Given a positive integer n,
